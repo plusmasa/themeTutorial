@@ -512,17 +512,21 @@ footer ul {
 
 }
 
-.client-logo:hover {
+/*.client-logo:hover {
     opacity: 1;
     border-bottom: 4px solid #999;
- 
+}*/
 
-}
+/*.client-logo .active-client {
+    opacity: 1;
+    border-bottom: 4px solid #e1c184;
+}*/
 
-.client-logo.selected-client {
+.active-client {
     opacity: 1;
     border-bottom: 4px solid #e1c184;
 }
+
 
 
 /* Contact Section Only Style */
@@ -692,17 +696,6 @@ footer ul {
     /* Client Section Styles */
     .client-controls {
         display: none;
-    }
-
-    .client-unit {
-        margin-left: 0;
-        left: auto;
-        position: relative;
-        display: block;
-    }
-
-    .clients-logos {
-        margin-top: 20px
     }
 }
 
