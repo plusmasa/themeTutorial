@@ -1,9 +1,9 @@
-$(document).ready(function() {
-	smoothScroll(300);
-	workLoad();
-	workBelt();
-	clientStuff();
-	
+$(function() {
+  smoothScroll(300);
+  workBelt();
+  workLoad();
+  clientStuff();
+  
 });
 
 // smoothScroll function is applied from the document ready function
@@ -65,7 +65,7 @@ function clientStuff() {
     $this.addClass('active-client');
   });
   
-  /*
+/*
   $('.client-control-next, .client-control-prev').click(function() {
   
     var $this = $(this),
@@ -92,3 +92,4 @@ function clientStuff() {
         }
 
       } */
+}      
