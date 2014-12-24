@@ -82,10 +82,8 @@ function clientStuff() {
       if(position == 0){
         $('.client-unit').removeClass('active-client').last().addClass('active-client');
         $('.client-logo').removeClass('active-client').last().addClass('active-client');
-
       } else {
-
-      $('.active-client').removeClass('active-client').prev().addClass('active-client');
+        $('.active-client').removeClass('active-client').prev().addClass('active-client');
       }
     }
 
