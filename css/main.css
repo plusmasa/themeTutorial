@@ -100,7 +100,8 @@ textarea {
    ========================================================================== */
 
 
-/* Global Styles */
+/* Global Style 
+=============================================================================*/
 
 p {
     font-size: 0.9em;
@@ -149,7 +150,8 @@ nav a:hover {
 }
 
 
-/* Header Only Styles */
+/* Header Section Style 
+=============================================================================*/
 
 header {
     height: 450px;
@@ -195,7 +197,8 @@ header span {
 
 }
 
-/* Footer Only Styles */
+/* Footer Section Style 
+=============================================================================*/
 
 footer {
     background: url(../img/logo.svg) 30px 30px no-repeat,
@@ -225,7 +228,8 @@ footer ul {
     color: rgba(0,0,0,0.4);
 }
 
-/* About Section Only Style */
+/* About Section Style
+====================================================================================== */
 
 .face-lockup {
     max-width: 780px;
@@ -310,7 +314,9 @@ footer ul {
     border: 2px solid #999999;
 }
 
-/* Portfolio Section Only Style */
+/* Portfolio Section Style 
+=============================================================================*/
+
 .section-work{
     overflow-x: hidden; 
 }
@@ -414,10 +420,16 @@ footer ul {
 }
 
 
-/* Clients Section Only Style */
+/* Clients Section Style 
+=============================================================================*/
+
 .section-clients {
     position: relative;
 }
+
+/* Clients Mobile Nav 
+
+/* Clients Desktop Nav */
 
 .client-controls {
     width: 100%;
@@ -442,6 +454,8 @@ footer ul {
     left: 20px;
 }
 
+/* Client Content */
+
 .clients-belt {
     width: 100%;
     position: relative;
@@ -449,13 +463,14 @@ footer ul {
 
 .client-unit {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 50px auto 50px -375px;
     display: flex;
     flex-direction: row;
     position: absolute;
     top: 0;
     left: 50%;
-    margin: 0 0 50px -375px;
+    opacity: 0;
+    transition: opacity, 500ms;
 }
 
 .client-face {
@@ -496,7 +511,7 @@ footer ul {
 .clients-logos {
     position: relative;
     max-width: 700px;
-    margin: 250px auto 100px auto;
+    margin: 300px auto 50px auto;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -525,7 +540,8 @@ footer ul {
 }
 
 
-/* Contact Section Only Style */
+/* Contact Section Style 
+=============================================================================*/
 
 /* ==========================================================================
    Helper classes
@@ -695,15 +711,13 @@ footer ul {
     }
 
     .client-unit {
-        margin-left: 0;
-        left: auto;
-        position: relative;
         display: block;
     }
 
     .clients-logos {
-        margin-top: 20px
+        display: none;
     }
+
 }
 
 

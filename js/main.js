@@ -49,20 +49,16 @@ function workBelt() {
 }
 
 function clientStuff() {
-	/* My old code:
-	$('.clients-unit').hide();
-	$('.client-unit').first().show();
-	$('.client-logo').first().addClass('selected-client');
-	*/
-	$('.client-unit').css('display','none');
-	$('.client-unit').first().css('display','flex');
+
+	$('.client-unit').css('opacity','0');
+	$('.client-unit').first().css('opacity','1');
 	$('.client-logo').first().addClass('selected-client');
 
 	$('.client-logo').click(function(){
 		var $this = $(this);
 		var $siblings = $this.parent().children();
 		var position = $siblings.index($this);
-		$('.client-unit').fadeOut('fast').eq(position).fadeIn('slow');
+		$('.client-unit').css('opacity','0').eq(position).css('opacity','1');
 		$siblings.removeClass('selected-client');
 		$this.addClass('selected-client');
 	});
@@ -78,9 +74,7 @@ function clientStuff() {
 			} else {
 				position = 0;
 			}
-		}
-
-		if ($this.hasClass('client-control-prev')) {
+		} else {
 			if(position > 0){
 				position = position - 1;
 			} else {
@@ -88,7 +82,7 @@ function clientStuff() {
 			}
 		}
 
-		$('.client-unit').fadeOut('fast').eq(position).fadeIn('slow');
+		$('.client-unit').css('opacity','0').eq(position).css('opacity','1');
 		$('.clients-logos').children().removeClass('selected-client');
 		$('.client-logo').eq(position).addClass('selected-client');
 	});
