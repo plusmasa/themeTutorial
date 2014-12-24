@@ -49,8 +49,13 @@ function workBelt() {
 }
 
 function clientStuff() {
-	$('.client-unit').hide();
+	/* My old code:
+	$('.clients-unit').hide();
 	$('.client-unit').first().show();
+	$('.client-logo').first().addClass('selected-client');
+	*/
+	$('.client-unit').css('display','none');
+	$('.client-unit').first().css('display','flex');
 	$('.client-logo').first().addClass('selected-client');
 
 	$('.client-logo').click(function(){
