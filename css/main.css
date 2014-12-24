@@ -427,14 +427,36 @@ footer ul {
     position: relative;
 }
 
-/* Clients Mobile Nav 
+/* Clients Mobile Nav */
+.clients-mobile-nav {
+    text-align: center;
+    display: none;
+    margin-bottom: 40px;
+}
+
+.clients-mobile-nav span {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    margin: 0 10px;
+    z-index: 1;
+}
+
+.clients-mobile-nav .selected-client {
+    border-color: #e1c184;
+}
 
 /* Clients Desktop Nav */
 
 .client-controls {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 40px;
+    position: relative;
+    top: 250px;
+    z-index: 1;
 }
 
 .client-controls div {
@@ -463,14 +485,11 @@ footer ul {
 
 .client-unit {
     max-width: 700px;
-    margin: 50px auto 50px -375px;
+    margin: 20px auto;
     display: flex;
     flex-direction: row;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    opacity: 0;
-    transition: opacity, 500ms;
+    position: relative;
+    opacity: 1;
 }
 
 .client-face {
@@ -511,7 +530,7 @@ footer ul {
 .clients-logos {
     position: relative;
     max-width: 700px;
-    margin: 300px auto 50px auto;
+    margin: 50px auto;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -712,10 +731,23 @@ footer ul {
 
     .client-unit {
         display: block;
+        margin-bottom: 50px;
+    }
+
+    .client-face {
+        margin-bottom: 30px;
+    }
+
+    .client-content {
+        padding: 0 12%;
     }
 
     .clients-logos {
         display: none;
+    }
+
+    .clients-mobile-nav {
+        display: block;
     }
 
 }

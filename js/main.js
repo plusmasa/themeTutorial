@@ -50,15 +50,16 @@ function workBelt() {
 
 function clientStuff() {
 
-	$('.client-unit').css('opacity','0');
-	$('.client-unit').first().css('opacity','1');
+	$('.client-unit').hide();
+	$('.client-unit').first().show();
 	$('.client-logo').first().addClass('selected-client');
+	$('.clients-mobile-nav span').first().addClass('selected-client');
 
-	$('.client-logo').click(function(){
+	$('.client-logo, .clients-mobile-nav span').click(function(){
 		var $this = $(this);
 		var $siblings = $this.parent().children();
 		var position = $siblings.index($this);
-		$('.client-unit').css('opacity','0').eq(position).css('opacity','1');
+		$('.client-unit').hide().css('opacity','0').eq(position).show().animate({opacity: 1},500);
 		$siblings.removeClass('selected-client');
 		$this.addClass('selected-client');
 	});
@@ -66,7 +67,7 @@ function clientStuff() {
 	$('.client-control-prev, .client-control-next').click(function() {
 		var $this = $(this);
 		var clients = $('.client-unit').siblings();
-		var position = $('.selected-client').index();
+		var position = $('.clients-logos').find('.selected-client').index();
 
 		if ($this.hasClass('client-control-next')) {
 			if(position < clients.length-1){
@@ -82,8 +83,8 @@ function clientStuff() {
 			}
 		}
 
-		$('.client-unit').css('opacity','0').eq(position).css('opacity','1');
-		$('.clients-logos').children().removeClass('selected-client');
-		$('.client-logo').eq(position).addClass('selected-client');
+		$('.client-unit').hide().css('opacity','0').eq(position).show().animate({opacity: 1},500);
+		$('.client-logo').removeClass('selected-client');
+		$('.client-logo').eq(position).addClass('selected-client');		
 	});
 }
