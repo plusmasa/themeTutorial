@@ -517,8 +517,19 @@ footer ul {
 }
 
 .client-content {
+    z-index: 1;
+    position: relative;
     font-size: 1.1em;
     font-weight: 300;
+}
+
+.client-content:before {
+    content: "";
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: -20px 0 0 -30px;
     background: url(../img/quoteMark.svg) 0px 0px no-repeat;
 }
 
